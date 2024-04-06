@@ -15,6 +15,12 @@ public class Emprestimo {
         this.dvd = dvd;
     }
 
+    public Emprestimo(Amigo amigo, DVD dvd) {
+        this.amigo = amigo;
+        this.dvd = dvd;
+        this.dataEmprestimo = new Date();
+    }
+
     public Date getDataEmprestimo() {
         return dataEmprestimo;
     }
