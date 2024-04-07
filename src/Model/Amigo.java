@@ -7,7 +7,7 @@ public class Amigo extends Pessoa{
     private FaixaEtaria faixaEtaria;
 
     //construtor vazio com inicializacao basica
-    public Amigo() {
+    public Amigo(String nome) {
         this.numTelefone = "";
         this.email = "";
         this.endereco = "";

@@ -1,9 +1,14 @@
 package Model;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 public class RegistroEmprestimo {
+    Amigo amigo;
+    DVD dvd;
+    Date dataEmprestimo;
+    Date dataDevolucao;
     private List<Emprestimo> emprestimos;
 
     public RegistroEmprestimo() {
@@ -49,5 +54,15 @@ public class RegistroEmprestimo {
             return faixaAmigo.ehAbaixo(faixaDVD);
         }
         return false;
+    }
+
+    @Override
+    public String toString() {
+        return "Detalhes do Registro de Empréstimo:\n" +
+                "Amigo: " + amigo.getNome() + "\n" +
+                "DVD emprestado: " + dvd.getTitulo() + "\n" +
+                "Data do empréstimo: " + dataEmprestimo + "\n" +
+                "Data de devolução: " + dataDevolucao + "\n" +
+                "-------------------------------------";
     }
 }
